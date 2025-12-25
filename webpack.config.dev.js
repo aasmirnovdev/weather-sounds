@@ -9,6 +9,12 @@ module.exports = merge(commonConfig, {
     port: 3000,
     hot: true,
     open: true,
+    client: {
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
+    },
   },
   plugins: [
     new ESLintPlugin({
@@ -16,5 +22,5 @@ module.exports = merge(commonConfig, {
       emitWarning: true,
       failOnError: false,
     }),
-  ]
+  ],
 })
