@@ -1,1 +1,0 @@
-{"version":3,"file":"main.2f2b3e244c6dfac56f0e.js","mappings":"mBAEAA,QAAQC,IAAI,Q","sources":["webpack:///./index.js"],"sourcesContent":["import './main.scss';\n\nconsole.log('hallo')"],"names":["console","log"],"ignoreList":[],"sourceRoot":""}
