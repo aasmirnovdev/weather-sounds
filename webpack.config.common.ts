@@ -1,11 +1,15 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
+import { Configuration } from 'webpack';
 
-module.exports = {
+const config:Configuration = {
   context: path.resolve(__dirname, 'src'),
-  entry: './index.js',
+  entry: './index.ts',
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
+  },
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
@@ -47,6 +51,13 @@ module.exports = {
         test: /\.(mp3)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.[tj]sx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ]
   }
 }
+
+export default config;
