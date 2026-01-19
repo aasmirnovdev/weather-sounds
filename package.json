@@ -4,9 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "npx webpack serve --config webpack.config.dev.js",
-    "build": "npx webpack --config webpack.config.prod.js",
-    "build:dev": "npx webpack --config webpack.config.dev.js",
+    "start": "npx webpack serve --config webpack.config.dev.ts",
+    "build": "npx webpack --config webpack.config.prod.ts",
+    "build:dev": "npx webpack --config webpack.config.dev.ts",
     "lint": "eslint"
   },
   "keywords": [],
@@ -25,6 +25,9 @@
     "sass-loader": "^16.0.6",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.16",
+    "ts-loader": "^9.5.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
     "webpack": "^5.104.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2",
