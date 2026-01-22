@@ -1,5 +1,6 @@
 import data from './data';
 import './main.scss';
+import './calc';
 
 const DEFAULT_VOLUME = 0.5;
 const mainBlock:HTMLDivElement | null = document.querySelector('.weather');
